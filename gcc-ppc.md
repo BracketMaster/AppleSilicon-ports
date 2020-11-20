@@ -41,6 +41,6 @@ loop:
 	bdnz loop
 ```
 
-Now run ``/usr/localppc-elf64/bin/as test.s``.
+Now run ``/usr/local/ppc-elf64/bin/as test.s``.
 ``as`` should exit and you should now see a new file
 ``a.out``.
