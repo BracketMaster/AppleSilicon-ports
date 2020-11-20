@@ -28,3 +28,19 @@ CFLAGS=-Wno-error ./configure --target=ppc-elf64 --with-system-zlib --with-pytho
 make
 sudo make install
  ```
+ 
+ # Testing
+Create a file ``test.s`` with the following contents:
+
+```
+	li 1, 10
+	mtctr 1
+	li 2, 0
+loop:
+	addi 2, 2, 1
+	bdnz loop
+```
+
+Now run ``/usr/localppc-elf64/bin/as test.s``.
+``as`` should exit and you should now see a new file
+``a.out``.
